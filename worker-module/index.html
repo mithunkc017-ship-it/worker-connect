@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkerConnect | Worker Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="../homepage/index.html"><span class="brand-mark">W</span><span>Worker<span>Connect</span></span></a>
+        <p class="module-label">WORKER MODULE</p>
+        <nav class="side-nav" aria-label="Worker dashboard navigation">
+          <a class="active" href="#overview"><span>◈</span> Overview</a>
+          <a href="#requests"><span>⌁</span> Job requests <b>3</b></a>
+          <a href="#profile"><span>○</span> My profile</a>
+          <a href="#earnings"><span>▣</span> Earnings</a>
+        </nav>
+        <div class="sidebar-help"><span>?</span><div><strong>Need help?</strong><small>Visit our support center</small></div></div>
+        <a class="sidebar-home" href="../homepage/index.html">← Back to home</a>
+      </aside>
+
+      <main class="dashboard" id="overview">
+        <header class="topbar"><div><p class="mobile-label">WORKER MODULE</p><h1>Good morning, Alex</h1><p class="top-subtitle">Here is what is happening with your work today.</p></div><div class="top-actions"><button class="icon-button" type="button" aria-label="Notifications">♢<i></i></button><div class="avatar">AC</div><span class="profile-name">Alex Carter</span></div></header>
+
+        <section class="availability-bar"><div class="availability-copy"><span class="live-dot"></span><div><strong id="availabilityText">You are available for work</strong><small>Customers can send you job requests</small></div></div><button class="availability-toggle is-on" id="availabilityToggle" type="button" aria-pressed="true"><span></span><span id="toggleLabel">Available</span></button></section>
+
+        <section class="stats-grid" aria-label="Worker statistics"><article><span class="stat-icon teal">↗</span><div><small>This month</small><strong>$2,480</strong><span class="trend">↑ 12.4%</span></div></article><article><span class="stat-icon yellow">✓</span><div><small>Completed jobs</small><strong>28</strong><span class="trend">↑ 8.2%</span></div></article><article><span class="stat-icon coral">★</span><div><small>Customer rating</small><strong>4.9 <small>/ 5.0</small></strong><span class="trend">Top rated</span></div></article><article><span class="stat-icon green">◷</span><div><small>Response rate</small><strong>96%</strong><span class="trend">Excellent</span></div></article></section>
+
+        <div class="content-grid">
+          <section class="panel requests-panel" id="requests"><div class="panel-heading"><div><p class="eyebrow">YOUR WORK</p><h2>Recent job requests</h2></div><a href="#requests">View all <span>→</span></a></div><div class="request-list" id="requestList"><article class="request-row"><span class="request-icon plumbing">⌁</span><div class="request-main"><strong>Leaking kitchen faucet</strong><span>Plumbing · 2.4 km away</span><small>Requested 12 min ago</small></div><strong class="request-price">$85</strong><div class="request-actions"><button class="accept-button" type="button">Accept</button><button class="decline-button" type="button">Decline</button></div></article><article class="request-row"><span class="request-icon electrical">ϟ</span><div class="request-main"><strong>Install ceiling light</strong><span>Electrical · 4.1 km away</span><small>Requested 48 min ago</small></div><strong class="request-price">$120</strong><div class="request-actions"><button class="accept-button" type="button">Accept</button><button class="decline-button" type="button">Decline</button></div></article><article class="request-row"><span class="request-icon repair">✣</span><div class="request-main"><strong>Fix bedroom door handle</strong><span>Carpentry · 1.8 km away</span><small>Requested 1 hr ago</small></div><strong class="request-price">$65</strong><div class="request-actions"><button class="accept-button" type="button">Accept</button><button class="decline-button" type="button">Decline</button></div></article></div><p class="panel-message" id="requestMessage" aria-live="polite"></p></section>
+
+          <section class="panel profile-panel" id="profile"><div class="panel-heading"><div><p class="eyebrow">YOUR PROFILE</p><h2>Profile strength</h2></div><a href="#profile">Edit <span>→</span></a></div><div class="profile-progress"><div class="progress-ring"><strong>80<small>%</small></strong></div><div><strong>Looking good, Alex</strong><p>Add a few more details to stand out to customers.</p></div></div><div class="profile-checks"><span class="done">✓ Profile photo</span><span class="done">✓ Skills added</span><span>○ Add qualifications</span><span>○ Add portfolio work</span></div><button class="outline-button" type="button" id="editProfile">Complete my profile <span>→</span></button></section>
+        </div>
+
+        <section class="panel earnings-panel" id="earnings"><div class="panel-heading"><div><p class="eyebrow">EARNING HISTORY</p><h2>Recent earnings</h2></div><button class="filter-button" type="button">This month ˅</button></div><div class="earnings-table"><div class="table-row table-head"><span>JOB</span><span>DATE</span><span>STATUS</span><span>AMOUNT</span></div><div class="table-row"><strong>Bathroom pipe repair</strong><span>Aug 18, 2026</span><span class="paid">Paid</span><strong>$145.00</strong></div><div class="table-row"><strong>Wall socket replacement</strong><span>Aug 15, 2026</span><span class="paid">Paid</span><strong>$90.00</strong></div><div class="table-row"><strong>Kitchen cabinet repair</strong><span>Aug 12, 2026</span><span class="paid">Paid</span><strong>$180.00</strong></div></div></section>
+        <footer>WorkerConnect Worker Module <span>·</span> Keep your profile updated to receive better matches.</footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

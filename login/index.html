@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkerConnect | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="brand-panel">
+        <div class="brand-header">
+          <div class="brand-logo">W</div>
+          <span>WorkOnnect</span>
+        </div>
+
+        <div class="hero-card">
+          <p class="eyebrow">Skilled help, connected</p>
+          <h1>Find trusted help nearby.</h1>
+          <p class="hero-description">
+            Connect with trusted local professionals for reliable home and everyday services. Find Jobs related to your skills.
+          </p>
+
+          <ul class="feature-list">
+            <li>Find trusted local professionals</li>
+            <li>Post and apply for jobs</li>
+            <li>Grow opportunities for skilled workers</li>
+          </ul>
+        </div>
+
+        <div class="stats">
+          <div class="stat-box">
+            <strong>12k+</strong>
+            <span>Workers</span>
+          </div>
+          <div class="stat-box">
+            <strong>4.9/5</strong>
+            <span>Customer rating</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="form-panel">
+        <div class="form-card">
+          <div id="loginPanel" class="auth-form active">
+            <!--span class="welcome-badge">Welcome back</span-->
+            <h2>Sign in</h2>
+            <p class="subtitle">Access your workspace and continue from where you left off.</p>
+
+            <!--button type="button" class="social-btn single-social">Continue with Google</button-->
+
+            <!--div class="divider">or continue with email</div>
+            <button class="google-btn">
+              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="google-icon">
+              <span>Continue with Google</span>
+            </button-->
+
+            <form id="loginForm" novalidate>
+              <div class="field-group">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@workonnect.com" required />
+              </div>
+
+              <div class="field-group">
+                <label for="password">Password</label>
+                <div class="password-wrap">
+                  <input id="password" name="password" type="password" placeholder="Enter your password" required />
+                  <button type="button" class="toggle-password" aria-label="Show password">Show</button>
+                </div>
+              </div>
+
+              <div class="divider">or continue with email</div>
+            <button class="google-btn">
+              <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Logo" class="google-icon">
+              <span>Continue with Google</span>
+            </button>
+
+              <div class="options-row">
+                <label class="remember-me">
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </label>
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="primary-btn">Log in</button>
+              <p id="message" class="message" aria-live="polite"></p>
+            </form>
+
+            <p class="signup-text">
+              New to WorkerConnect?
+              <button type="button" class="text-button" id="showSignup">Create an account</button>
+            </p>
+          </div>
+
+          <div id="signupPanel" class="auth-form hidden">
+            <!--span class="welcome-badge">Create account</span-->
+            <h2>Get started</h2>
+            <p class="subtitle">Create your WorkerConnect account and get started.</p>
+
+            <form id="signupForm" novalidate>
+              <div class="field-group">
+                <label for="fullName">Full name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="field-group">
+                <label for="signupEmail">Email address</label>
+                <input id="signupEmail" name="signupEmail" type="email" placeholder="you@workonnect.com" required />
+              </div>
+
+              <div class="field-group">
+                <label for="signupPassword">Password</label>
+                <input id="signupPassword" name="signupPassword" type="password" placeholder="Create a password" required />
+              </div>
+
+              <button type="submit" class="primary-btn">Create account</button>
+              <p id="signupMessage" class="message" aria-live="polite"></p>
+            </form>
+
+            <p class="signup-text">
+              Already have a WorkerConnect account?
+              <button type="button" class="text-button" id="showLogin">Log in</button>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
